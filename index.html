@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #9c27b0, #ff6e40);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .form-container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Header Styling */
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #9c27b0;
+        }
+
+        /* Label and Input Fields */
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #ff6e40;
+            box-shadow: 0 0 5px rgba(255, 110, 64, 0.5);
+            outline: none;
+        }
+
+        /* Buttons */
+        .submit-btn {
+            display: block;
+            background: linear-gradient(135deg, #ff6e40, #9c27b0);
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #9c27b0, #ff6e40);
+            transform: scale(1.02);
+        }
+
+        /* Message Styling */
+        .message {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 15px;
+            color: #ff6e40;
+        }
+
+        .message.success {
+            color: #4CAF50;
+        }
+
+        .message.error {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <!-- Username Field -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Login</button>
+
+            <!-- Message Area -->
+            <div id="message" class="message"></div>
+        </form>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const messageDiv = document.getElementById('message');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(loginForm);
+
+            // Replace with your Google Apps Script Web App URL
+            const scriptURL = "https://script.google.com/macros/s/AKfycbw1RdlfY9N6JdQqw2T8JLpEUB6WwTYAmt4h0Xrp5e6uX7SNvET3eHUI0ZKQcQC2GRfbPg/exec";
+
+            const response = await fetch(scriptURL, {
+                method: 'POST',
+                body: new URLSearchParams(formData),
+            });
+
+            const result = await response.text();
+
+            if (result === "success") {
+                const username = formData.get('username');
+                localStorage.setItem('loggedInUser', username); // Store username in localStorage
+                messageDiv.textContent = "Welcome, " + username + "!";
+                messageDiv.className = "message success";
+                setTimeout(() => {
+                    window.location.href = `PHONE.htmL?username=${encodeURIComponent(username)}`; // Redirect with username
+                }, 1500);
+            } else {
+                messageDiv.textContent = "Invalid username or password. Please try again.";
+                messageDiv.className = "message error";
+            }
+        });
+    </script>
+</body>
+</html>
