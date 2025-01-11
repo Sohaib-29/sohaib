@@ -9,6 +9,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <style>
         /* General Styles */
+        .hidden-field {
+            display: none;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            border: 4px solid #f3f3f3; /* Light gray */
+            border-top: 4px solid #9c27b0; /* Purple */
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .hidden-field {
+             display: none;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -511,143 +542,143 @@
                             <button type="button" class="remove-item-btn" onclick="removeItem(this)">Remove Item</button>
                             <select name="Item 1 (Box 1)" class="searchable-dropdown">
                                 <option value="">Select Item</option>
-                                <option value="ABAYA">ABAYA</option>
-                                <option value="ABB ACTUARTOR">ABB ACTUARTOR</option>
-                                <option value="ABB IP CONVERTER">ABB IP CONVERTER</option>
-                                <option value="ACCULAN">ACCULAN</option>
-                                <option value="AIR BAGS">AIR BAGS</option>
-                                <option value="ANTONPAAR KEY PAID">ANTONPAAR KEY PAID</option>
-                                <option value="ART JEWELRY">ART JEWELRY</option>
-                                <option value="ATUO PARTS">ATUO PARTS</option>
-                                <option value="BABY GARMENTS">BABY GARMENTS</option>
-                                <option value="BAD MATTRESS">BAD MATTRESS</option>
-                                <option value="BAD SHEET">BAD SHEET</option>
-                                <option value="BAGS">BAGS</option>
-                                <option value="BANGEL SET">BANGEL SET</option>
+                                <option value="ARTIFICIAL BANGLES">ARTIFICIAL BANGLES</option>
+                                <option value="ARTIFICIAL EAR RINGS">ARTIFICIAL EAR RINGS</option>
+                                <option value="ARTIFICIAL FLOWERS">ARTIFICIAL FLOWERS</option>
+                                <option value="ARTIFICIAL JEWELLERY">ARTIFICIAL JEWELLERY</option>
+                                <option value="BABY BED MOSQUITO NET">BABY BED MOSQUITO NET</option>
+                                <option value="BEAUTY PRODUCTS">BEAUTY PRODUCTS</option>
                                 <option value="BED SHEETS">BED SHEETS</option>
-                                <option value="BELTS">BELTS</option>
-                                <option value="BIRDS CAGES">BIRDS CAGES</option>
+                                <option value="BLANKET">BLANKET</option>
                                 <option value="BOOKS">BOOKS</option>
-                                <option value="BRIDAL SUIT">BRIDAL SUIT</option>
-                                <option value="BROWN TAGS">BROWN TAGS</option>
-                                <option value="CARD">CARD</option>
-                                <option value="CARPET">CARPET</option>
-                                <option value="COINS PKT">COINS PKT</option>
-                                <option value="CONE MAHNDI">CONE MAHNDI</option>
-                                <option value="COSMATIC">COSMATIC</option>
-                                <option value="COTTON STRETCH">COTTON STRETCH</option>
-                                <option value="CROCARY">CROCARY</option>
+                                <option value="BOWLS">BOWLS</option>
+                                <option value="BOYS SLIPPER">BOYS SLIPPER</option>
+                                <option value="BOYS SUITS">BOYS SUITS</option>
+                                <option value="BRIDAL LEHENGA">BRIDAL LEHENGA</option>
+                                <option value="BRUSH">BRUSH</option>
+                                <option value="CAP">CAP</option>
+                                <option value="CHAIN (ARTIFICIAL JWELLERY)">CHAIN (ARTIFICIAL JWELLERY)</option>
+                                <option value="CUFFLINKS">CUFFLINKS</option>
                                 <option value="CURTAINS">CURTAINS</option>
-                                <option value="CUSION">CUSION</option>
-                                <option value="DATALOGIC RELAY">DATALOGIC RELAY</option>
-                                <option value="DECORATIOAN ITEMS">DECORATIOAN ITEMS</option>
-                                <option value="DECORATION PCS">DECORATION PCS</option>
-                                <option value="DINNER SET">DINNER SET</option>
-                                <option value="DRIED FRUIT">DRIED FRUIT</option>
-                                <option value="ELASTIC">ELASTIC</option>
-                                <option value="ELEICTIC GOODS">ELEICTIC GOODS</option>
-                                <option value="EMPTY TUBE">EMPTY TUBE</option>
-                                <option value="ENVELOPE">ENVELOPE</option>
-                                <option value="FABRIC AHRAM">FABRIC AHRAM</option>
-                                <option value="FIBER SHEET">FIBER SHEET</option>
-                                <option value="FILE COVERS">FILE COVERS</option>
-                                <option value="FILTER">FILTER</option>
-                                <option value="FITTED SHEET">FITTED SHEET</option>
+                                <option value="DECORATION BASKET">DECORATION BASKET</option>
+                                <option value="DECORATION PIECE">DECORATION PIECE</option>
+                                <option value="DRY FRUIT PLATE">DRY FRUIT PLATE</option>
+                                <option value="DUPATTA">DUPATTA</option>
+                                <option value="EMPTY BOX">EMPTY BOX</option>
+                                <option value="EYEGLASSES">EYEGLASSES</option>
                                 <option value="FLAGS">FLAGS</option>
-                                <option value="FLAVOUR SPICES">FLAVOUR SPICES</option>
-                                <option value="FOOD ITEMS">FOOD ITEMS</option>
-                                <option value="FRUITS/VAGETABLE">FRUITS/VAGETABLE</option>
-                                <option value="FUSIBLE INTERFACING">FUSIBLE INTERFACING</option>
-                                <option value="GARMENTS">GARMENTS</option>
-                                <option value="GLASS PIECES">GLASS PIECES</option>
-                                <option value="GLOVES">GLOVES</option>
-                                <option value="GUASHA">GUASHA</option>
-                                <option value="HAIR DREYER">HAIR DREYER</option>
-                                <option value="HERBAL">HERBAL</option>
-                                <option value="HOODIES">HOODIES</option>
-                                <option value="HOUSE HOLD">HOUSE HOLD</option>
-                                <option value="ISLAMIC CAPS">ISLAMIC CAPS</option>
-                                <option value="JACKETS">JACKETS</option>
-                                <option value="JEWELAR PKT">JEWELAR PKT</option>
-                                <option value="KITCHEN ACCESSORIES">KITCHEN ACCESSORIES</option>
+                                <option value="FLOOR MATS">FLOOR MATS</option>
+                                <option value="GARMENTS ACCESSORIES ELASTIC ROLL">GARMENTS ACCESSORIES ELASTIC ROLL</option>
+                                <option value="GENTS BELT">GENTS BELT</option>
+                                <option value="GENTS JACKETS">GENTS JACKETS</option>
+                                <option value="GENTS KURTA">GENTS KURTA</option>
+                                <option value="GENTS KURTA PAJAMA">GENTS KURTA PAJAMA</option>
+                                <option value="GENTS PAJAMA">GENTS PAJAMA</option>
+                                <option value="GENTS PANTS">GENTS PANTS</option>
+                                <option value="GENTS PVC SLIPPERS">GENTS PVC SLIPPERS</option>
+                                <option value="GENTS SANDLES">GENTS SANDLES</option>
+                                <option value="GENTS SHALWAR KAMEEZ">GENTS SHALWAR KAMEEZ</option>
+                                <option value="GENTS SHIRTS">GENTS SHIRTS</option>
+                                <option value="GENTS SHIRWANI">GENTS SHIRWANI</option>
+                                <option value="GENTS SHOES">GENTS SHOES</option>
+                                <option value="GENTS SUITS">GENTS SUITS</option>
+                                <option value="GENTS SWEATER">GENTS SWEATER</option>
+                                <option value="GENTS UNDERGARMENTS">GENTS UNDERGARMENTS</option>
+                                <option value="GENTS UPPER">GENTS UPPER</option>
+                                <option value="GENTS WAISTCOAT">GENTS WAISTCOAT</option>
+                                <option value="GENTS WALLETS">GENTS WALLETS</option>
+                                <option value="GIRL FROCK">GIRL FROCK</option>
+                                <option value="GIRLS CANVA SHOES">GIRLS CANVA SHOES</option>
+                                <option value="GIRLS SANDAL">GIRLS SANDAL</option>
+                                <option value="GIRLS SUITS">GIRLS SUITS</option>
+                                <option value="GIRLS SYNTHETIC KNITTED TIGHTS">GIRLS SYNTHETIC KNITTED TIGHTS</option>
+                                <option value="GIRLS UPPER">GIRLS UPPER</option>
+                                <option value="GLASS">GLASS</option>
+                                <option value="GLOVES PAIR">GLOVES PAIR</option>
+                                <option value="HAIR BANDS">HAIR BANDS</option>
+                                <option value="HAIR CLIPS">HAIR CLIPS</option>
+                                <option value="HAIR DRYER">HAIR DRYER</option>
+                                <option value="HAND TAG">HAND TAG</option>
+                                <option value="HEAD SCARF">HEAD SCARF</option>
+                                <option value="HINA CONE MEHENDI">HINA CONE MEHENDI</option>
+                                <option value="HOLY QURAN">HOLY QURAN</option>
+                                <option value="ISLAMIC BOOKS">ISLAMIC BOOKS</option>
+                                <option value="JAY NAMAZ">JAY NAMAZ</option>
+                                <option value="JEWELLERY EMPTY POUCHES">JEWELLERY EMPTY POUCHES</option>
+                                <option value="JOGGERS">JOGGERS</option>
+                                <option value="KETTLE SMALL">KETTLE SMALL</option>
+                                <option value="KIDS SUITS">KIDS SUITS</option>
+                                <option value="KITCHEN CROCKERY">KITCHEN CROCKERY</option>
+                                <option value="KNIFE">KNIFE</option>
                                 <option value="LAB COAT">LAB COAT</option>
+                                <option value="LACES">LACES</option>
+                                <option value="LADIES ABAYA">LADIES ABAYA</option>
+                                <option value="LADIES BAGS">LADIES BAGS</option>
+                                <option value="LADIES CLOTHS">LADIES CLOTHS</option>
+                                <option value="LADIES CLUTCH">LADIES CLUTCH</option>
+                                <option value="LADIES FROCK">LADIES FROCK</option>
+                                <option value="LADIES GHARARA">LADIES GHARARA</option>
+                                <option value="LADIES HIJAB">LADIES HIJAB</option>
+                                <option value="LADIES JACKET">LADIES JACKET</option>
+                                <option value="LADIES KHUSSAY">LADIES KHUSSAY</option>
+                                <option value="LADIES KNITTED SWEATER">LADIES KNITTED SWEATER</option>
+                                <option value="LADIES KURTIES">LADIES KURTIES</option>
+                                <option value="LADIES MAXI">LADIES MAXI</option>
+                                <option value="LADIES PANTS">LADIES PANTS</option>
+                                <option value="LADIES SHAWLS">LADIES SHAWLS</option>
+                                <option value="LADIES SHIRTS">LADIES SHIRTS</option>
+                                <option value="LADIES SHOES">LADIES SHOES</option>
+                                <option value="LADIES SLIPPERS">LADIES SLIPPERS</option>
                                 <option value="LADIES SUITS">LADIES SUITS</option>
-                                <option value="LASSER LIGHT">LASSER LIGHT</option>
-                                <option value="LIVE BIRDS WELLPAPER">LIVE BIRDS WELLPAPER</option>
-                                <option value="LYCRA JERSEY">LYCRA JERSEY</option>
-                                <option value="MARBLE PLATES">MARBLE PLATES</option>
-                                <option value="MEDICAL INTRUMENT">MEDICAL INTRUMENT</option>
-                                <option value="MEN SUITS">MEN SUITS</option>
-                                <option value="METAL PLEATS">METAL PLEATS</option>
-                                <option value="MICROPHONE">MICROPHONE</option>
-                                <option value="MISWAK">MISWAK</option>
-                                <option value="MIX GARMENTS">MIX GARMENTS</option>
-                                <option value="MOBILE POUCH">MOBILE POUCH</option>
-                                <option value="MOISTURE TEST KIT">MOISTURE TEST KIT</option>
-                                <option value="MOUTH FRESHNER">MOUTH FRESHNER</option>
-                                <option value="NAIL NIPPERS">NAIL NIPPERS</option>
-                                <option value="NAPKIN">NAPKIN</option>
-                                <option value="NATURAL HONEY">NATURAL HONEY</option>
-                                <option value="NEON SIGN">NEON SIGN</option>
-                                <option value="OIL DIPSTICKS">OIL DIPSTICKS</option>
-                                <option value="OPENERS">OPENERS</option>
-                                <option value="OPTICAL UNIT">OPTICAL UNIT</option>
-                                <option value="PACKING MATERIAL">PACKING MATERIAL</option>
-                                <option value="PAIN">PAIN</option>
-                                <option value="PANAFLEX">PANAFLEX</option>
-                                <option value="PANTS">PANTS</option>
-                                <option value="PAPER BAGS">PAPER BAGS</option>
-                                <option value="PAPER BOX">PAPER BOX</option>
-                                <option value="PARTS SAMPLE">PARTS SAMPLE</option>
-                                <option value="PHOTO FRAM">PHOTO FRAM</option>
-                                <option value="PILLOW COVER">PILLOW COVER</option>
-                                <option value="PLASTIC FILM ROLL">PLASTIC FILM ROLL</option>
-                                <option value="PRINTING MATERIAL">PRINTING MATERIAL</option>
-                                <option value="PUBLICATION">PUBLICATION</option>
-                                <option value="RAW MAGNESITE ORE">RAW MAGNESITE ORE</option>
-                                <option value="ROOF RACK">ROOF RACK</option>
-                                <option value="SALLOW PALE">SALLOW PALE</option>
-                                <option value="SALT">SALT</option>
-                                <option value="SAMPLE TESTING">SAMPLE TESTING</option>
+                                <option value="LADIES TOP">LADIES TOP</option>
+                                <option value="LADIES UNDER GARMENTS">LADIES UNDER GARMENTS</option>
+                                <option value="LADIES WOVEN WAISTCOAT">LADIES WOVEN WAISTCOAT</option>
+                                <option value="LEATHER ACCESSORIES">LEATHER ACCESSORIES</option>
+                                <option value="LEATHER JACKET">LEATHER JACKET</option>
+                                <option value="LEATHER PANT">LEATHER PANT</option>
+                                <option value="MACHINE">MACHINE</option>
+                                <option value="MATTRESS COVER">MATTRESS COVER</option>
+                                <option value="MENS HOODIES">MENS HOODIES</option>
+                                <option value="MENS JUBBAY">MENS JUBBAY</option>
+                                <option value="MENS POLYSTER COAT">MENS POLYSTER COAT</option>
+                                <option value="MENS POLYSTER PANT COAT">MENS POLYSTER PANT COAT</option>
+                                <option value="MENS WOVEN HANDKERCHIEF (100% POLYSTER)">MENS WOVEN HANDKERCHIEF (100% POLYSTER)</option>
+                                <option value="MISWAK STICKS">MISWAK STICKS</option>
+                                <option value="MOBILE POUCHES">MOBILE POUCHES</option>
+                                <option value="MOTOR MIXER BASE (SPARE PARTS FOR COFFEE MACHINE)">MOTOR MIXER BASE (SPARE PARTS FOR COFFEE MACHINE)</option>
+                                <option value="PAMPHLETS (BUNDLES)">PAMPHLETS (BUNDLES)</option>
+                                <option value="PEN">PEN</option>
+                                <option value="PILLOW COVERS">PILLOW COVERS</option>
+                                <option value="PLASTIC CAPS">PLASTIC CAPS</option>
+                                <option value="PLASTIC TRAY">PLASTIC TRAY</option>
+                                <option value="PLATES">PLATES</option>
+                                <option value="POUCHES">POUCHES</option>
+                                <option value="PRINTING MATERIAL CARD STRIP">PRINTING MATERIAL CARD STRIP</option>
+                                <option value="PU JACKETS">PU JACKETS</option>
                                 <option value="SCARFS">SCARFS</option>
-                                <option value="SCENTED CANDLE">SCENTED CANDLE</option>
-                                <option value="SCRUBS SETS">SCRUBS SETS</option>
-                                <option value="SEAT FOAM">SEAT FOAM</option>
-                                <option value="SHAWLS">SHAWLS</option>
-                                <option value="SHIRTS">SHIRTS</option>
-                                <option value="SHOES">SHOES</option>
-                                <option value="SHORTS">SHORTS</option>
-                                <option value="SIMPIN">SIMPIN</option>
-                                <option value="SNOOKER STICK">SNOOKER STICK</option>
-                                <option value="SOCKS PKT">SOCKS PKT</option>
-                                <option value="SPICES">SPICES</option>
-                                <option value="STEEL PLATS">STEEL PLATS</option>
-                                <option value="STICKER PKTS">STICKER PKTS</option>
-                                <option value="STP SCI CONTROLER">STP SCI CONTROLER</option>
-                                <option value="SWEET BOX">SWEET BOX</option>
-                                <option value="T SHIRT">T SHIRT</option>
-                                <option value="TABEL TOP">TABEL TOP</option>
-                                <option value="TANDOOR">TANDOOR</option>
-                                <option value="TEA COASTER">TEA COASTER</option>
-                                <option value="TEEN PACK">TEEN PACK</option>
-                                <option value="TEMPERATURE DEVICE">TEMPERATURE DEVICE</option>
-                                <option value="TONGUE SCRAPER">TONGUE SCRAPER</option>
-                                <option value="TOPS">TOPS</option>
-                                <option value="TOWELS">TOWELS</option>
-                                <option value="TRACK SUIT">TRACK SUIT</option>
+                                <option value="SCISSORS">SCISSORS</option>
+                                <option value="SHOW PIECE">SHOW PIECE</option>
+                                <option value="SOCKS">SOCKS</option>
+                                <option value="SPOON">SPOON</option>
+                                <option value="STAR">STAR</option>
+                                <option value="STEEL SHOW PC ITEMS">STEEL SHOW PC ITEMS</option>
+                                <option value="SWATCHES">SWATCHES</option>
+                                <option value="T SHIRTS">T SHIRTS</option>
+                                <option value="TEA CUP (27201751# MELAMINE)">TEA CUP (27201751# MELAMINE)</option>
+                                <option value="THAAL">THAAL</option>
+                                <option value="THREAD BOX SAMPLES">THREAD BOX SAMPLES</option>
+                                <option value="TOWEL">TOWEL</option>
+                                <option value="TOYS">TOYS</option>
+                                <option value="TRIM CARD">TRIM CARD</option>
                                 <option value="TROUSERS">TROUSERS</option>
-                                <option value="UNDER GARMENTS">UNDER GARMENTS</option>
-                                <option value="USED CLOTHING">USED CLOTHING</option>
-                                <option value="WAISCOAT">WAISCOAT</option>
-                                <option value="WALL HANNGING">WALL HANNGING</option>
-                                <option value="WALLETS">WALLETS</option>
-                                <option value="WATCH">WATCH</option>
-                                <option value="WAX">WAX</option>
-                                <option value="WEEDING ACCESSERIS">WEEDING ACCESSERIS</option>
-                                <option value="WELDING WIRE">WELDING WIRE</option>
-                                <option value="WINCH">WINCH</option>
-                                <option value="WOOD STICKS">WOOD STICKS</option>
-                                <option value="YARN">YARN</option>
+                                <option value="VISITING CARDS">VISITING CARDS</option>
+                                <option value="VISITING CARDS (BUNDLES)">VISITING CARDS (BUNDLES)</option>
+                                <option value="WAIST APPRONS">WAIST APPRONS</option>
+                                <option value="WAIST ROBE PKT">WAIST ROBE PKT</option>
+                                <option value="WRIST WATCH">WRIST WATCH</option>
+                                <option value="ZIPPER HOODIE">ZIPPER HOODIE</option>
+
+                                
 
                             </select>
                             <input type="number" name="Qty 1 (Box 1)" placeholder="Enter Quantity">
@@ -658,17 +689,18 @@
                     <button type="button" class="add-item-button" data-box-index="1" onclick="addItem(this)">+ Add Item</button>
 
                     <!-- Weight and Volume Fields -->
-                    <label for="box-1-chargeable-weight">Chargeable Weight:</label>
+                    <label for="box-1-chargeable-weight">Actual Weight:</label> 
                     <input type="number" id="box-1-chargeable-weight" name="Chargeable Weight 1" placeholder="Enter Chargeable Weight">
 
                     <label for="box-1-chargeable-volume">Chargeable Volume:</label>
                     <input type="number" id="box-1-chargeable-volume" name="Chargeable Volume 1" placeholder="Enter Chargeable Volume">
 
-                    <label for="box-1-dispatching-weight">Dispatching Weight:</label>
-                    <input type="number" id="box-1-dispatching-weight" name="Dispatching Weight 1" placeholder="Enter Dispatching Weight">
+                    <label for="box-1-dispatching-weight" class="hidden-field">Dispatching Weight:</label>
+                    <input type="number" id="box-1-dispatching-weight" name="Dispatching Weight 1" placeholder="Enter Dispatching Weight" class="hidden-field">
 
-                    <label for="box-1-dispatching-volume">Dispatching Volume:</label>
-                    <input type="number" id="box-1-dispatching-volume" name="Dispatching Volume 1" placeholder="Enter Dispatching Volume">
+
+                    <label for="box-1-dispatching-volume" class="hidden-field">Dispatching Volume:</label>
+                    <input type="number" id="box-1-dispatching-volume" name="Dispatching Volume 1" placeholder="Enter Dispatching Volume" class="hidden-field">
                 </div>
             </div>
 
@@ -690,70 +722,152 @@
         document.getElementById('username-display').textContent = `Logged in as: ${username}`;
         document.getElementById('username').value = username;
 
-        // Handle Form Submission
-        document.getElementById('shipment-form').addEventListener('submit', async (event) => {
-            event.preventDefault();
+// Handle Form Submission
+document.getElementById('shipment-form').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
 
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData.entries());
+    const submitButton = document.querySelector('.submit-btn');
 
-            try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbxWgkxgkzUU9ZbKgTXh3DW0Fo6SyQi_NV-ErVKT47jOkZ9KkJxHkG8_wENGlfWdb3c35w/exec', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                    mode: 'no-cors', // Disable CORS
-                });
+    // Check if the form is already being submitted
+    if (submitButton.disabled) {
+        alert('Data is already being transferred. Please wait.');
+        return;
+    }
 
-                // No response is expected with 'no-cors' mode
-                showMessage('Shipment added (CORS disabled, no response).', 'success');
-                event.target.reset();
-                renumberBoxes();
+    // Validate all boxes before submission
+    if (!validateBoxes()) {
+        return;
+    }
 
-            } catch (error) {
-                console.error('Error:', error);
-                showMessage('An error occurred. Please try again.', 'error');
+    // Disable the submit button and show the loading spinner
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<div class="loading-spinner"></div> Transferring Data...';
+
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch(
+            'https://script.google.com/macros/s/AKfycbxWgkxgkzUU9ZbKgTXh3DW0Fo6SyQi_NV-ErVKT47jOkZ9KkJxHkG8_wENGlfWdb3c35w/exec',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+                mode: 'no-cors', // Disable CORS
             }
-        });
+        );
 
-        function showMessage(message, type) {
-            const messageBox = document.getElementById('message');
-            messageBox.textContent = message;
-            messageBox.className = `message ${type}`;
-            messageBox.style.display = 'block';
+        // No response is expected with 'no-cors' mode
+        showMessage('Shipment added successfully.', 'success');
 
-            setTimeout(() => {
-                messageBox.style.display = 'none';
-            }, 3000);
+        // Reset the form and reinitialize the page
+        resetForm();
+    } catch (error) {
+        console.error('Error:', error);
+        showMessage('An error occurred. Please try again.', 'error');
+    } finally {
+        // Re-enable the button and reset its text
+        submitButton.disabled = false;
+        submitButton.textContent = 'Add Shipment';
+    }
+});
+
+// Reset the form to its initial state
+function resetForm() {
+    // Reset the form element
+    const form = document.getElementById('shipment-form');
+    form.reset();
+
+    // Remove all dynamically added boxes
+    const boxContainer = document.getElementById('box-container');
+    boxContainer.innerHTML = '';
+
+    // Reinitialize the first box
+    addBox();
+
+    // Reset dropdowns (reinitialize Select2 for searchable dropdowns)
+    $('.searchable-dropdown').val('').trigger('change');
+    $('.searchable-dropdown').select2();
+}
+
+// Validate all boxes and their fields
+function validateBoxes() {
+    const boxes = document.querySelectorAll('.box-container');
+    let isValid = true;
+
+    boxes.forEach((box, index) => {
+        const boxIndex = index + 1;
+        const boxType = box.querySelector(`[name="Box Type ${boxIndex}"]`);
+        const chargeableWeight = box.querySelector(`[name="Chargeable Weight ${boxIndex}"]`);
+        const chargeableVolume = box.querySelector(`[name="Chargeable Volume ${boxIndex}"]`);
+        const items = box.querySelectorAll('.item-row');
+
+        // Check if box type, weight, and volume are filled
+        if (!boxType.value || !chargeableWeight.value || !chargeableVolume.value) {
+            isValid = false;
+            showMessage(`Please fill all fields for Box #${boxIndex}.`, 'error');
+            return;
         }
 
-        // Renumber Boxes
-        function renumberBoxes() {
-            const boxes = document.querySelectorAll('.box-container');
-            if (boxes.length >= 7) {
-                alert("Maximum of 6 boxes allowed.");
+        // Validate each item in the box
+        items.forEach((item, itemIndex) => {
+            const itemName = item.querySelector(`[name="Item ${itemIndex + 1} (Box ${boxIndex})"]`);
+            const itemQty = item.querySelector(`[name="Qty ${itemIndex + 1} (Box ${boxIndex})"]`);
+
+            if (!itemName.value || !itemQty.value) {
+                isValid = false;
+                showMessage(`Please fill all fields for Item #${itemIndex + 1} in Box #${boxIndex}.`, 'error');
                 return;
             }
-            boxes.forEach((box, index) => {
-                const boxIndex = index + 1;
-                box.setAttribute('data-box-index', boxIndex);
-                box.querySelector('h3').textContent = `Box #${boxIndex}`;
-                box.querySelector('.items-container').setAttribute('data-box-index', boxIndex);
-                renumberItems(box);
-            });
-        }
+        });
+    });
 
-        // Renumber Items
-        function renumberItems(box) {
-            const items = box.querySelectorAll('.item-row');
-            items.forEach((item, index) => {
-                const itemIndex = index + 1;
-                item.setAttribute('data-item-index', itemIndex);
-                item.querySelector('.item-label').textContent = `Item #${itemIndex}`;
-            });
-        }
+    return isValid;
+}
+
+// Show a message (success or error)
+function showMessage(message, type) {
+    const messageBox = document.getElementById('message');
+    messageBox.textContent = message;
+    messageBox.className = `message ${type}`;
+    messageBox.style.display = 'block';
+
+    setTimeout(() => {
+        messageBox.style.display = 'none';
+    }, 5000);
+}
+
+// Renumber Boxes
+function renumberBoxes() {
+    const boxes = document.querySelectorAll('.box-container');
+    boxes.forEach((box, index) => {
+        const boxIndex = index + 1;
+        box.setAttribute('data-box-index', boxIndex);
+        box.querySelector('h3').textContent = `Box #${boxIndex}`;
+        box.querySelector('.items-container').setAttribute('data-box-index', boxIndex);
+        renumberItems(box);
+    });
+}
+
+// Renumber Items
+function renumberItems(box) {
+    const items = box.querySelectorAll('.item-row');
+    items.forEach((item, index) => {
+        const itemIndex = index + 1;
+        item.setAttribute('data-item-index', itemIndex);
+        item.querySelector('.item-label').textContent = `Item #${itemIndex}`;
+    });
+}
+
+// Add the initial box on page load
+document.addEventListener('DOMContentLoaded', () => {
+    resetForm(); // Ensure the form starts with one box
+});
+
+
+
 
         // Add Box
         function addBox() {
@@ -793,143 +907,143 @@
                         <button type="button" class="remove-item-btn" onclick="removeItem(this)">Remove Item</button>
                         <select name="Item 1 (Box ${currentBoxes + 1})" class="searchable-dropdown">
                                 <option value="">Select Item</option>
-                                <option value="ABAYA">ABAYA</option>
-                                <option value="ABB ACTUARTOR">ABB ACTUARTOR</option>
-                                <option value="ABB IP CONVERTER">ABB IP CONVERTER</option>
-                                <option value="ACCULAN">ACCULAN</option>
-                                <option value="AIR BAGS">AIR BAGS</option>
-                                <option value="ANTONPAAR KEY PAID">ANTONPAAR KEY PAID</option>
-                                <option value="ART JEWELRY">ART JEWELRY</option>
-                                <option value="ATUO PARTS">ATUO PARTS</option>
-                                <option value="BABY GARMENTS">BABY GARMENTS</option>
-                                <option value="BAD MATTRESS">BAD MATTRESS</option>
-                                <option value="BAD SHEET">BAD SHEET</option>
-                                <option value="BAGS">BAGS</option>
-                                <option value="BANGEL SET">BANGEL SET</option>
+                                <option value="ARTIFICIAL BANGLES">ARTIFICIAL BANGLES</option>
+                                <option value="ARTIFICIAL EAR RINGS">ARTIFICIAL EAR RINGS</option>
+                                <option value="ARTIFICIAL FLOWERS">ARTIFICIAL FLOWERS</option>
+                                <option value="ARTIFICIAL JEWELLERY">ARTIFICIAL JEWELLERY</option>
+                                <option value="BABY BED MOSQUITO NET">BABY BED MOSQUITO NET</option>
+                                <option value="BEAUTY PRODUCTS">BEAUTY PRODUCTS</option>
                                 <option value="BED SHEETS">BED SHEETS</option>
-                                <option value="BELTS">BELTS</option>
-                                <option value="BIRDS CAGES">BIRDS CAGES</option>
+                                <option value="BLANKET">BLANKET</option>
                                 <option value="BOOKS">BOOKS</option>
-                                <option value="BRIDAL SUIT">BRIDAL SUIT</option>
-                                <option value="BROWN TAGS">BROWN TAGS</option>
-                                <option value="CARD">CARD</option>
-                                <option value="CARPET">CARPET</option>
-                                <option value="COINS PKT">COINS PKT</option>
-                                <option value="CONE MAHNDI">CONE MAHNDI</option>
-                                <option value="COSMATIC">COSMATIC</option>
-                                <option value="COTTON STRETCH">COTTON STRETCH</option>
-                                <option value="CROCARY">CROCARY</option>
+                                <option value="BOWLS">BOWLS</option>
+                                <option value="BOYS SLIPPER">BOYS SLIPPER</option>
+                                <option value="BOYS SUITS">BOYS SUITS</option>
+                                <option value="BRIDAL LEHENGA">BRIDAL LEHENGA</option>
+                                <option value="BRUSH">BRUSH</option>
+                                <option value="CAP">CAP</option>
+                                <option value="CHAIN (ARTIFICIAL JWELLERY)">CHAIN (ARTIFICIAL JWELLERY)</option>
+                                <option value="CUFFLINKS">CUFFLINKS</option>
                                 <option value="CURTAINS">CURTAINS</option>
-                                <option value="CUSION">CUSION</option>
-                                <option value="DATALOGIC RELAY">DATALOGIC RELAY</option>
-                                <option value="DECORATIOAN ITEMS">DECORATIOAN ITEMS</option>
-                                <option value="DECORATION PCS">DECORATION PCS</option>
-                                <option value="DINNER SET">DINNER SET</option>
-                                <option value="DRIED FRUIT">DRIED FRUIT</option>
-                                <option value="ELASTIC">ELASTIC</option>
-                                <option value="ELEICTIC GOODS">ELEICTIC GOODS</option>
-                                <option value="EMPTY TUBE">EMPTY TUBE</option>
-                                <option value="ENVELOPE">ENVELOPE</option>
-                                <option value="FABRIC AHRAM">FABRIC AHRAM</option>
-                                <option value="FIBER SHEET">FIBER SHEET</option>
-                                <option value="FILE COVERS">FILE COVERS</option>
-                                <option value="FILTER">FILTER</option>
-                                <option value="FITTED SHEET">FITTED SHEET</option>
+                                <option value="DECORATION BASKET">DECORATION BASKET</option>
+                                <option value="DECORATION PIECE">DECORATION PIECE</option>
+                                <option value="DRY FRUIT PLATE">DRY FRUIT PLATE</option>
+                                <option value="DUPATTA">DUPATTA</option>
+                                <option value="EMPTY BOX">EMPTY BOX</option>
+                                <option value="EYEGLASSES">EYEGLASSES</option>
                                 <option value="FLAGS">FLAGS</option>
-                                <option value="FLAVOUR SPICES">FLAVOUR SPICES</option>
-                                <option value="FOOD ITEMS">FOOD ITEMS</option>
-                                <option value="FRUITS/VAGETABLE">FRUITS/VAGETABLE</option>
-                                <option value="FUSIBLE INTERFACING">FUSIBLE INTERFACING</option>
-                                <option value="GARMENTS">GARMENTS</option>
-                                <option value="GLASS PIECES">GLASS PIECES</option>
-                                <option value="GLOVES">GLOVES</option>
-                                <option value="GUASHA">GUASHA</option>
-                                <option value="HAIR DREYER">HAIR DREYER</option>
-                                <option value="HERBAL">HERBAL</option>
-                                <option value="HOODIES">HOODIES</option>
-                                <option value="HOUSE HOLD">HOUSE HOLD</option>
-                                <option value="ISLAMIC CAPS">ISLAMIC CAPS</option>
-                                <option value="JACKETS">JACKETS</option>
-                                <option value="JEWELAR PKT">JEWELAR PKT</option>
-                                <option value="KITCHEN ACCESSORIES">KITCHEN ACCESSORIES</option>
+                                <option value="FLOOR MATS">FLOOR MATS</option>
+                                <option value="GARMENTS ACCESSORIES ELASTIC ROLL">GARMENTS ACCESSORIES ELASTIC ROLL</option>
+                                <option value="GENTS BELT">GENTS BELT</option>
+                                <option value="GENTS JACKETS">GENTS JACKETS</option>
+                                <option value="GENTS KURTA">GENTS KURTA</option>
+                                <option value="GENTS KURTA PAJAMA">GENTS KURTA PAJAMA</option>
+                                <option value="GENTS PAJAMA">GENTS PAJAMA</option>
+                                <option value="GENTS PANTS">GENTS PANTS</option>
+                                <option value="GENTS PVC SLIPPERS">GENTS PVC SLIPPERS</option>
+                                <option value="GENTS SANDLES">GENTS SANDLES</option>
+                                <option value="GENTS SHALWAR KAMEEZ">GENTS SHALWAR KAMEEZ</option>
+                                <option value="GENTS SHIRTS">GENTS SHIRTS</option>
+                                <option value="GENTS SHIRWANI">GENTS SHIRWANI</option>
+                                <option value="GENTS SHOES">GENTS SHOES</option>
+                                <option value="GENTS SUITS">GENTS SUITS</option>
+                                <option value="GENTS SWEATER">GENTS SWEATER</option>
+                                <option value="GENTS UNDERGARMENTS">GENTS UNDERGARMENTS</option>
+                                <option value="GENTS UPPER">GENTS UPPER</option>
+                                <option value="GENTS WAISTCOAT">GENTS WAISTCOAT</option>
+                                <option value="GENTS WALLETS">GENTS WALLETS</option>
+                                <option value="GIRL FROCK">GIRL FROCK</option>
+                                <option value="GIRLS CANVA SHOES">GIRLS CANVA SHOES</option>
+                                <option value="GIRLS SANDAL">GIRLS SANDAL</option>
+                                <option value="GIRLS SUITS">GIRLS SUITS</option>
+                                <option value="GIRLS SYNTHETIC KNITTED TIGHTS">GIRLS SYNTHETIC KNITTED TIGHTS</option>
+                                <option value="GIRLS UPPER">GIRLS UPPER</option>
+                                <option value="GLASS">GLASS</option>
+                                <option value="GLOVES PAIR">GLOVES PAIR</option>
+                                <option value="HAIR BANDS">HAIR BANDS</option>
+                                <option value="HAIR CLIPS">HAIR CLIPS</option>
+                                <option value="HAIR DRYER">HAIR DRYER</option>
+                                <option value="HAND TAG">HAND TAG</option>
+                                <option value="HEAD SCARF">HEAD SCARF</option>
+                                <option value="HINA CONE MEHENDI">HINA CONE MEHENDI</option>
+                                <option value="HOLY QURAN">HOLY QURAN</option>
+                                <option value="ISLAMIC BOOKS">ISLAMIC BOOKS</option>
+                                <option value="JAY NAMAZ">JAY NAMAZ</option>
+                                <option value="JEWELLERY EMPTY POUCHES">JEWELLERY EMPTY POUCHES</option>
+                                <option value="JOGGERS">JOGGERS</option>
+                                <option value="KETTLE SMALL">KETTLE SMALL</option>
+                                <option value="KIDS SUITS">KIDS SUITS</option>
+                                <option value="KITCHEN CROCKERY">KITCHEN CROCKERY</option>
+                                <option value="KNIFE">KNIFE</option>
                                 <option value="LAB COAT">LAB COAT</option>
+                                <option value="LACES">LACES</option>
+                                <option value="LADIES ABAYA">LADIES ABAYA</option>
+                                <option value="LADIES BAGS">LADIES BAGS</option>
+                                <option value="LADIES CLOTHS">LADIES CLOTHS</option>
+                                <option value="LADIES CLUTCH">LADIES CLUTCH</option>
+                                <option value="LADIES FROCK">LADIES FROCK</option>
+                                <option value="LADIES GHARARA">LADIES GHARARA</option>
+                                <option value="LADIES HIJAB">LADIES HIJAB</option>
+                                <option value="LADIES JACKET">LADIES JACKET</option>
+                                <option value="LADIES KHUSSAY">LADIES KHUSSAY</option>
+                                <option value="LADIES KNITTED SWEATER">LADIES KNITTED SWEATER</option>
+                                <option value="LADIES KURTIES">LADIES KURTIES</option>
+                                <option value="LADIES MAXI">LADIES MAXI</option>
+                                <option value="LADIES PANTS">LADIES PANTS</option>
+                                <option value="LADIES SHAWLS">LADIES SHAWLS</option>
+                                <option value="LADIES SHIRTS">LADIES SHIRTS</option>
+                                <option value="LADIES SHOES">LADIES SHOES</option>
+                                <option value="LADIES SLIPPERS">LADIES SLIPPERS</option>
                                 <option value="LADIES SUITS">LADIES SUITS</option>
-                                <option value="LASSER LIGHT">LASSER LIGHT</option>
-                                <option value="LIVE BIRDS WELLPAPER">LIVE BIRDS WELLPAPER</option>
-                                <option value="LYCRA JERSEY">LYCRA JERSEY</option>
-                                <option value="MARBLE PLATES">MARBLE PLATES</option>
-                                <option value="MEDICAL INTRUMENT">MEDICAL INTRUMENT</option>
-                                <option value="MEN SUITS">MEN SUITS</option>
-                                <option value="METAL PLEATS">METAL PLEATS</option>
-                                <option value="MICROPHONE">MICROPHONE</option>
-                                <option value="MISWAK">MISWAK</option>
-                                <option value="MIX GARMENTS">MIX GARMENTS</option>
-                                <option value="MOBILE POUCH">MOBILE POUCH</option>
-                                <option value="MOISTURE TEST KIT">MOISTURE TEST KIT</option>
-                                <option value="MOUTH FRESHNER">MOUTH FRESHNER</option>
-                                <option value="NAIL NIPPERS">NAIL NIPPERS</option>
-                                <option value="NAPKIN">NAPKIN</option>
-                                <option value="NATURAL HONEY">NATURAL HONEY</option>
-                                <option value="NEON SIGN">NEON SIGN</option>
-                                <option value="OIL DIPSTICKS">OIL DIPSTICKS</option>
-                                <option value="OPENERS">OPENERS</option>
-                                <option value="OPTICAL UNIT">OPTICAL UNIT</option>
-                                <option value="PACKING MATERIAL">PACKING MATERIAL</option>
-                                <option value="PAIN">PAIN</option>
-                                <option value="PANAFLEX">PANAFLEX</option>
-                                <option value="PANTS">PANTS</option>
-                                <option value="PAPER BAGS">PAPER BAGS</option>
-                                <option value="PAPER BOX">PAPER BOX</option>
-                                <option value="PARTS SAMPLE">PARTS SAMPLE</option>
-                                <option value="PHOTO FRAM">PHOTO FRAM</option>
-                                <option value="PILLOW COVER">PILLOW COVER</option>
-                                <option value="PLASTIC FILM ROLL">PLASTIC FILM ROLL</option>
-                                <option value="PRINTING MATERIAL">PRINTING MATERIAL</option>
-                                <option value="PUBLICATION">PUBLICATION</option>
-                                <option value="RAW MAGNESITE ORE">RAW MAGNESITE ORE</option>
-                                <option value="ROOF RACK">ROOF RACK</option>
-                                <option value="SALLOW PALE">SALLOW PALE</option>
-                                <option value="SALT">SALT</option>
-                                <option value="SAMPLE TESTING">SAMPLE TESTING</option>
+                                <option value="LADIES TOP">LADIES TOP</option>
+                                <option value="LADIES UNDER GARMENTS">LADIES UNDER GARMENTS</option>
+                                <option value="LADIES WOVEN WAISTCOAT">LADIES WOVEN WAISTCOAT</option>
+                                <option value="LEATHER ACCESSORIES">LEATHER ACCESSORIES</option>
+                                <option value="LEATHER JACKET">LEATHER JACKET</option>
+                                <option value="LEATHER PANT">LEATHER PANT</option>
+                                <option value="MACHINE">MACHINE</option>
+                                <option value="MATTRESS COVER">MATTRESS COVER</option>
+                                <option value="MENS HOODIES">MENS HOODIES</option>
+                                <option value="MENS JUBBAY">MENS JUBBAY</option>
+                                <option value="MENS POLYSTER COAT">MENS POLYSTER COAT</option>
+                                <option value="MENS POLYSTER PANT COAT">MENS POLYSTER PANT COAT</option>
+                                <option value="MENS WOVEN HANDKERCHIEF (100% POLYSTER)">MENS WOVEN HANDKERCHIEF (100% POLYSTER)</option>
+                                <option value="MISWAK STICKS">MISWAK STICKS</option>
+                                <option value="MOBILE POUCHES">MOBILE POUCHES</option>
+                                <option value="MOTOR MIXER BASE (SPARE PARTS FOR COFFEE MACHINE)">MOTOR MIXER BASE (SPARE PARTS FOR COFFEE MACHINE)</option>
+                                <option value="PAMPHLETS (BUNDLES)">PAMPHLETS (BUNDLES)</option>
+                                <option value="PEN">PEN</option>
+                                <option value="PILLOW COVERS">PILLOW COVERS</option>
+                                <option value="PLASTIC CAPS">PLASTIC CAPS</option>
+                                <option value="PLASTIC TRAY">PLASTIC TRAY</option>
+                                <option value="PLATES">PLATES</option>
+                                <option value="POUCHES">POUCHES</option>
+                                <option value="PRINTING MATERIAL CARD STRIP">PRINTING MATERIAL CARD STRIP</option>
+                                <option value="PU JACKETS">PU JACKETS</option>
                                 <option value="SCARFS">SCARFS</option>
-                                <option value="SCENTED CANDLE">SCENTED CANDLE</option>
-                                <option value="SCRUBS SETS">SCRUBS SETS</option>
-                                <option value="SEAT FOAM">SEAT FOAM</option>
-                                <option value="SHAWLS">SHAWLS</option>
-                                <option value="SHIRTS">SHIRTS</option>
-                                <option value="SHOES">SHOES</option>
-                                <option value="SHORTS">SHORTS</option>
-                                <option value="SIMPIN">SIMPIN</option>
-                                <option value="SNOOKER STICK">SNOOKER STICK</option>
-                                <option value="SOCKS PKT">SOCKS PKT</option>
-                                <option value="SPICES">SPICES</option>
-                                <option value="STEEL PLATS">STEEL PLATS</option>
-                                <option value="STICKER PKTS">STICKER PKTS</option>
-                                <option value="STP SCI CONTROLER">STP SCI CONTROLER</option>
-                                <option value="SWEET BOX">SWEET BOX</option>
-                                <option value="T SHIRT">T SHIRT</option>
-                                <option value="TABEL TOP">TABEL TOP</option>
-                                <option value="TANDOOR">TANDOOR</option>
-                                <option value="TEA COASTER">TEA COASTER</option>
-                                <option value="TEEN PACK">TEEN PACK</option>
-                                <option value="TEMPERATURE DEVICE">TEMPERATURE DEVICE</option>
-                                <option value="TONGUE SCRAPER">TONGUE SCRAPER</option>
-                                <option value="TOPS">TOPS</option>
-                                <option value="TOWELS">TOWELS</option>
-                                <option value="TRACK SUIT">TRACK SUIT</option>
+                                <option value="SCISSORS">SCISSORS</option>
+                                <option value="SHOW PIECE">SHOW PIECE</option>
+                                <option value="SOCKS">SOCKS</option>
+                                <option value="SPOON">SPOON</option>
+                                <option value="STAR">STAR</option>
+                                <option value="STEEL SHOW PC ITEMS">STEEL SHOW PC ITEMS</option>
+                                <option value="SWATCHES">SWATCHES</option>
+                                <option value="T SHIRTS">T SHIRTS</option>
+                                <option value="TEA CUP (27201751# MELAMINE)">TEA CUP (27201751# MELAMINE)</option>
+                                <option value="THAAL">THAAL</option>
+                                <option value="THREAD BOX SAMPLES">THREAD BOX SAMPLES</option>
+                                <option value="TOWEL">TOWEL</option>
+                                <option value="TOYS">TOYS</option>
+                                <option value="TRIM CARD">TRIM CARD</option>
                                 <option value="TROUSERS">TROUSERS</option>
-                                <option value="UNDER GARMENTS">UNDER GARMENTS</option>
-                                <option value="USED CLOTHING">USED CLOTHING</option>
-                                <option value="WAISCOAT">WAISCOAT</option>
-                                <option value="WALL HANNGING">WALL HANNGING</option>
-                                <option value="WALLETS">WALLETS</option>
-                                <option value="WATCH">WATCH</option>
-                                <option value="WAX">WAX</option>
-                                <option value="WEEDING ACCESSERIS">WEEDING ACCESSERIS</option>
-                                <option value="WELDING WIRE">WELDING WIRE</option>
-                                <option value="WINCH">WINCH</option>
-                                <option value="WOOD STICKS">WOOD STICKS</option>
-                                <option value="YARN">YARN</option>
+                                <option value="VISITING CARDS">VISITING CARDS</option>
+                                <option value="VISITING CARDS (BUNDLES)">VISITING CARDS (BUNDLES)</option>
+                                <option value="WAIST APPRONS">WAIST APPRONS</option>
+                                <option value="WAIST ROBE PKT">WAIST ROBE PKT</option>
+                                <option value="WRIST WATCH">WRIST WATCH</option>
+                                <option value="ZIPPER HOODIE">ZIPPER HOODIE</option>
+
+
                         </select>
                         <input type="number" name="Qty 1 (Box ${currentBoxes + 1})" placeholder="Enter Quantity">
                     </div>
@@ -943,11 +1057,11 @@
                 <label for="chargeable-volume">Chargeable Volume:</label>
                 <input type="number" name="Chargeable Volume ${currentBoxes + 1}" placeholder="Enter Chargeable Volume">
 
-                <label for="dispatching-weight">Dispatching Weight:</label>
-                <input type="number" name="Dispatching Weight ${currentBoxes + 1}" placeholder="Enter Dispatching Weight">
+                <label for="dispatching-weight" class="hidden-field">Dispatching Weight:</label>
+                <input type="number" name="Dispatching Weight ${currentBoxes + 1}" placeholder="Enter Dispatching Weight" class="hidden-field">
 
-                <label for="dispatching-volume">Dispatching Volume:</label>
-                <input type="number" name="Dispatching Volume ${currentBoxes + 1}" placeholder="Enter Dispatching Volume">
+                <label for="dispatching-volume" class="hidden-field">Dispatching Volume:</label>
+                <input type="number" name="Dispatching Volume ${currentBoxes + 1}" placeholder="Enter Dispatching Volume" class="hidden-field">
             `;
 
             document.getElementById('box-container').appendChild(boxContainer);
@@ -983,143 +1097,142 @@
                     <button type="button" class="remove-item-btn" onclick="removeItem(this)">Remove Item</button>
                     <select name="Item ${newItemIndex} (Box ${boxIndex})" class="searchable-dropdown">
                                 <option value="">Select Item</option>
-                                <option value="ABAYA">ABAYA</option>
-                                <option value="ABB ACTUARTOR">ABB ACTUARTOR</option>
-                                <option value="ABB IP CONVERTER">ABB IP CONVERTER</option>
-                                <option value="ACCULAN">ACCULAN</option>
-                                <option value="AIR BAGS">AIR BAGS</option>
-                                <option value="ANTONPAAR KEY PAID">ANTONPAAR KEY PAID</option>
-                                <option value="ART JEWELRY">ART JEWELRY</option>
-                                <option value="ATUO PARTS">ATUO PARTS</option>
-                                <option value="BABY GARMENTS">BABY GARMENTS</option>
-                                <option value="BAD MATTRESS">BAD MATTRESS</option>
-                                <option value="BAD SHEET">BAD SHEET</option>
-                                <option value="BAGS">BAGS</option>
-                                <option value="BANGEL SET">BANGEL SET</option>
+                                <option value="ARTIFICIAL BANGLES">ARTIFICIAL BANGLES</option>
+                                <option value="ARTIFICIAL EAR RINGS">ARTIFICIAL EAR RINGS</option>
+                                <option value="ARTIFICIAL FLOWERS">ARTIFICIAL FLOWERS</option>
+                                <option value="ARTIFICIAL JEWELLERY">ARTIFICIAL JEWELLERY</option>
+                                <option value="BABY BED MOSQUITO NET">BABY BED MOSQUITO NET</option>
+                                <option value="BEAUTY PRODUCTS">BEAUTY PRODUCTS</option>
                                 <option value="BED SHEETS">BED SHEETS</option>
-                                <option value="BELTS">BELTS</option>
-                                <option value="BIRDS CAGES">BIRDS CAGES</option>
+                                <option value="BLANKET">BLANKET</option>
                                 <option value="BOOKS">BOOKS</option>
-                                <option value="BRIDAL SUIT">BRIDAL SUIT</option>
-                                <option value="BROWN TAGS">BROWN TAGS</option>
-                                <option value="CARD">CARD</option>
-                                <option value="CARPET">CARPET</option>
-                                <option value="COINS PKT">COINS PKT</option>
-                                <option value="CONE MAHNDI">CONE MAHNDI</option>
-                                <option value="COSMATIC">COSMATIC</option>
-                                <option value="COTTON STRETCH">COTTON STRETCH</option>
-                                <option value="CROCARY">CROCARY</option>
+                                <option value="BOWLS">BOWLS</option>
+                                <option value="BOYS SLIPPER">BOYS SLIPPER</option>
+                                <option value="BOYS SUITS">BOYS SUITS</option>
+                                <option value="BRIDAL LEHENGA">BRIDAL LEHENGA</option>
+                                <option value="BRUSH">BRUSH</option>
+                                <option value="CAP">CAP</option>
+                                <option value="CHAIN (ARTIFICIAL JWELLERY)">CHAIN (ARTIFICIAL JWELLERY)</option>
+                                <option value="CUFFLINKS">CUFFLINKS</option>
                                 <option value="CURTAINS">CURTAINS</option>
-                                <option value="CUSION">CUSION</option>
-                                <option value="DATALOGIC RELAY">DATALOGIC RELAY</option>
-                                <option value="DECORATIOAN ITEMS">DECORATIOAN ITEMS</option>
-                                <option value="DECORATION PCS">DECORATION PCS</option>
-                                <option value="DINNER SET">DINNER SET</option>
-                                <option value="DRIED FRUIT">DRIED FRUIT</option>
-                                <option value="ELASTIC">ELASTIC</option>
-                                <option value="ELEICTIC GOODS">ELEICTIC GOODS</option>
-                                <option value="EMPTY TUBE">EMPTY TUBE</option>
-                                <option value="ENVELOPE">ENVELOPE</option>
-                                <option value="FABRIC AHRAM">FABRIC AHRAM</option>
-                                <option value="FIBER SHEET">FIBER SHEET</option>
-                                <option value="FILE COVERS">FILE COVERS</option>
-                                <option value="FILTER">FILTER</option>
-                                <option value="FITTED SHEET">FITTED SHEET</option>
+                                <option value="DECORATION BASKET">DECORATION BASKET</option>
+                                <option value="DECORATION PIECE">DECORATION PIECE</option>
+                                <option value="DRY FRUIT PLATE">DRY FRUIT PLATE</option>
+                                <option value="DUPATTA">DUPATTA</option>
+                                <option value="EMPTY BOX">EMPTY BOX</option>
+                                <option value="EYEGLASSES">EYEGLASSES</option>
                                 <option value="FLAGS">FLAGS</option>
-                                <option value="FLAVOUR SPICES">FLAVOUR SPICES</option>
-                                <option value="FOOD ITEMS">FOOD ITEMS</option>
-                                <option value="FRUITS/VAGETABLE">FRUITS/VAGETABLE</option>
-                                <option value="FUSIBLE INTERFACING">FUSIBLE INTERFACING</option>
-                                <option value="GARMENTS">GARMENTS</option>
-                                <option value="GLASS PIECES">GLASS PIECES</option>
-                                <option value="GLOVES">GLOVES</option>
-                                <option value="GUASHA">GUASHA</option>
-                                <option value="HAIR DREYER">HAIR DREYER</option>
-                                <option value="HERBAL">HERBAL</option>
-                                <option value="HOODIES">HOODIES</option>
-                                <option value="HOUSE HOLD">HOUSE HOLD</option>
-                                <option value="ISLAMIC CAPS">ISLAMIC CAPS</option>
-                                <option value="JACKETS">JACKETS</option>
-                                <option value="JEWELAR PKT">JEWELAR PKT</option>
-                                <option value="KITCHEN ACCESSORIES">KITCHEN ACCESSORIES</option>
+                                <option value="FLOOR MATS">FLOOR MATS</option>
+                                <option value="GARMENTS ACCESSORIES ELASTIC ROLL">GARMENTS ACCESSORIES ELASTIC ROLL</option>
+                                <option value="GENTS BELT">GENTS BELT</option>
+                                <option value="GENTS JACKETS">GENTS JACKETS</option>
+                                <option value="GENTS KURTA">GENTS KURTA</option>
+                                <option value="GENTS KURTA PAJAMA">GENTS KURTA PAJAMA</option>
+                                <option value="GENTS PAJAMA">GENTS PAJAMA</option>
+                                <option value="GENTS PANTS">GENTS PANTS</option>
+                                <option value="GENTS PVC SLIPPERS">GENTS PVC SLIPPERS</option>
+                                <option value="GENTS SANDLES">GENTS SANDLES</option>
+                                <option value="GENTS SHALWAR KAMEEZ">GENTS SHALWAR KAMEEZ</option>
+                                <option value="GENTS SHIRTS">GENTS SHIRTS</option>
+                                <option value="GENTS SHIRWANI">GENTS SHIRWANI</option>
+                                <option value="GENTS SHOES">GENTS SHOES</option>
+                                <option value="GENTS SUITS">GENTS SUITS</option>
+                                <option value="GENTS SWEATER">GENTS SWEATER</option>
+                                <option value="GENTS UNDERGARMENTS">GENTS UNDERGARMENTS</option>
+                                <option value="GENTS UPPER">GENTS UPPER</option>
+                                <option value="GENTS WAISTCOAT">GENTS WAISTCOAT</option>
+                                <option value="GENTS WALLETS">GENTS WALLETS</option>
+                                <option value="GIRL FROCK">GIRL FROCK</option>
+                                <option value="GIRLS CANVA SHOES">GIRLS CANVA SHOES</option>
+                                <option value="GIRLS SANDAL">GIRLS SANDAL</option>
+                                <option value="GIRLS SUITS">GIRLS SUITS</option>
+                                <option value="GIRLS SYNTHETIC KNITTED TIGHTS">GIRLS SYNTHETIC KNITTED TIGHTS</option>
+                                <option value="GIRLS UPPER">GIRLS UPPER</option>
+                                <option value="GLASS">GLASS</option>
+                                <option value="GLOVES PAIR">GLOVES PAIR</option>
+                                <option value="HAIR BANDS">HAIR BANDS</option>
+                                <option value="HAIR CLIPS">HAIR CLIPS</option>
+                                <option value="HAIR DRYER">HAIR DRYER</option>
+                                <option value="HAND TAG">HAND TAG</option>
+                                <option value="HEAD SCARF">HEAD SCARF</option>
+                                <option value="HINA CONE MEHENDI">HINA CONE MEHENDI</option>
+                                <option value="HOLY QURAN">HOLY QURAN</option>
+                                <option value="ISLAMIC BOOKS">ISLAMIC BOOKS</option>
+                                <option value="JAY NAMAZ">JAY NAMAZ</option>
+                                <option value="JEWELLERY EMPTY POUCHES">JEWELLERY EMPTY POUCHES</option>
+                                <option value="JOGGERS">JOGGERS</option>
+                                <option value="KETTLE SMALL">KETTLE SMALL</option>
+                                <option value="KIDS SUITS">KIDS SUITS</option>
+                                <option value="KITCHEN CROCKERY">KITCHEN CROCKERY</option>
+                                <option value="KNIFE">KNIFE</option>
                                 <option value="LAB COAT">LAB COAT</option>
+                                <option value="LACES">LACES</option>
+                                <option value="LADIES ABAYA">LADIES ABAYA</option>
+                                <option value="LADIES BAGS">LADIES BAGS</option>
+                                <option value="LADIES CLOTHS">LADIES CLOTHS</option>
+                                <option value="LADIES CLUTCH">LADIES CLUTCH</option>
+                                <option value="LADIES FROCK">LADIES FROCK</option>
+                                <option value="LADIES GHARARA">LADIES GHARARA</option>
+                                <option value="LADIES HIJAB">LADIES HIJAB</option>
+                                <option value="LADIES JACKET">LADIES JACKET</option>
+                                <option value="LADIES KHUSSAY">LADIES KHUSSAY</option>
+                                <option value="LADIES KNITTED SWEATER">LADIES KNITTED SWEATER</option>
+                                <option value="LADIES KURTIES">LADIES KURTIES</option>
+                                <option value="LADIES MAXI">LADIES MAXI</option>
+                                <option value="LADIES PANTS">LADIES PANTS</option>
+                                <option value="LADIES SHAWLS">LADIES SHAWLS</option>
+                                <option value="LADIES SHIRTS">LADIES SHIRTS</option>
+                                <option value="LADIES SHOES">LADIES SHOES</option>
+                                <option value="LADIES SLIPPERS">LADIES SLIPPERS</option>
                                 <option value="LADIES SUITS">LADIES SUITS</option>
-                                <option value="LASSER LIGHT">LASSER LIGHT</option>
-                                <option value="LIVE BIRDS WELLPAPER">LIVE BIRDS WELLPAPER</option>
-                                <option value="LYCRA JERSEY">LYCRA JERSEY</option>
-                                <option value="MARBLE PLATES">MARBLE PLATES</option>
-                                <option value="MEDICAL INTRUMENT">MEDICAL INTRUMENT</option>
-                                <option value="MEN SUITS">MEN SUITS</option>
-                                <option value="METAL PLEATS">METAL PLEATS</option>
-                                <option value="MICROPHONE">MICROPHONE</option>
-                                <option value="MISWAK">MISWAK</option>
-                                <option value="MIX GARMENTS">MIX GARMENTS</option>
-                                <option value="MOBILE POUCH">MOBILE POUCH</option>
-                                <option value="MOISTURE TEST KIT">MOISTURE TEST KIT</option>
-                                <option value="MOUTH FRESHNER">MOUTH FRESHNER</option>
-                                <option value="NAIL NIPPERS">NAIL NIPPERS</option>
-                                <option value="NAPKIN">NAPKIN</option>
-                                <option value="NATURAL HONEY">NATURAL HONEY</option>
-                                <option value="NEON SIGN">NEON SIGN</option>
-                                <option value="OIL DIPSTICKS">OIL DIPSTICKS</option>
-                                <option value="OPENERS">OPENERS</option>
-                                <option value="OPTICAL UNIT">OPTICAL UNIT</option>
-                                <option value="PACKING MATERIAL">PACKING MATERIAL</option>
-                                <option value="PAIN">PAIN</option>
-                                <option value="PANAFLEX">PANAFLEX</option>
-                                <option value="PANTS">PANTS</option>
-                                <option value="PAPER BAGS">PAPER BAGS</option>
-                                <option value="PAPER BOX">PAPER BOX</option>
-                                <option value="PARTS SAMPLE">PARTS SAMPLE</option>
-                                <option value="PHOTO FRAM">PHOTO FRAM</option>
-                                <option value="PILLOW COVER">PILLOW COVER</option>
-                                <option value="PLASTIC FILM ROLL">PLASTIC FILM ROLL</option>
-                                <option value="PRINTING MATERIAL">PRINTING MATERIAL</option>
-                                <option value="PUBLICATION">PUBLICATION</option>
-                                <option value="RAW MAGNESITE ORE">RAW MAGNESITE ORE</option>
-                                <option value="ROOF RACK">ROOF RACK</option>
-                                <option value="SALLOW PALE">SALLOW PALE</option>
-                                <option value="SALT">SALT</option>
-                                <option value="SAMPLE TESTING">SAMPLE TESTING</option>
+                                <option value="LADIES TOP">LADIES TOP</option>
+                                <option value="LADIES UNDER GARMENTS">LADIES UNDER GARMENTS</option>
+                                <option value="LADIES WOVEN WAISTCOAT">LADIES WOVEN WAISTCOAT</option>
+                                <option value="LEATHER ACCESSORIES">LEATHER ACCESSORIES</option>
+                                <option value="LEATHER JACKET">LEATHER JACKET</option>
+                                <option value="LEATHER PANT">LEATHER PANT</option>
+                                <option value="MACHINE">MACHINE</option>
+                                <option value="MATTRESS COVER">MATTRESS COVER</option>
+                                <option value="MENS HOODIES">MENS HOODIES</option>
+                                <option value="MENS JUBBAY">MENS JUBBAY</option>
+                                <option value="MENS POLYSTER COAT">MENS POLYSTER COAT</option>
+                                <option value="MENS POLYSTER PANT COAT">MENS POLYSTER PANT COAT</option>
+                                <option value="MENS WOVEN HANDKERCHIEF (100% POLYSTER)">MENS WOVEN HANDKERCHIEF (100% POLYSTER)</option>
+                                <option value="MISWAK STICKS">MISWAK STICKS</option>
+                                <option value="MOBILE POUCHES">MOBILE POUCHES</option>
+                                <option value="MOTOR MIXER BASE (SPARE PARTS FOR COFFEE MACHINE)">MOTOR MIXER BASE (SPARE PARTS FOR COFFEE MACHINE)</option>
+                                <option value="PAMPHLETS (BUNDLES)">PAMPHLETS (BUNDLES)</option>
+                                <option value="PEN">PEN</option>
+                                <option value="PILLOW COVERS">PILLOW COVERS</option>
+                                <option value="PLASTIC CAPS">PLASTIC CAPS</option>
+                                <option value="PLASTIC TRAY">PLASTIC TRAY</option>
+                                <option value="PLATES">PLATES</option>
+                                <option value="POUCHES">POUCHES</option>
+                                <option value="PRINTING MATERIAL CARD STRIP">PRINTING MATERIAL CARD STRIP</option>
+                                <option value="PU JACKETS">PU JACKETS</option>
                                 <option value="SCARFS">SCARFS</option>
-                                <option value="SCENTED CANDLE">SCENTED CANDLE</option>
-                                <option value="SCRUBS SETS">SCRUBS SETS</option>
-                                <option value="SEAT FOAM">SEAT FOAM</option>
-                                <option value="SHAWLS">SHAWLS</option>
-                                <option value="SHIRTS">SHIRTS</option>
-                                <option value="SHOES">SHOES</option>
-                                <option value="SHORTS">SHORTS</option>
-                                <option value="SIMPIN">SIMPIN</option>
-                                <option value="SNOOKER STICK">SNOOKER STICK</option>
-                                <option value="SOCKS PKT">SOCKS PKT</option>
-                                <option value="SPICES">SPICES</option>
-                                <option value="STEEL PLATS">STEEL PLATS</option>
-                                <option value="STICKER PKTS">STICKER PKTS</option>
-                                <option value="STP SCI CONTROLER">STP SCI CONTROLER</option>
-                                <option value="SWEET BOX">SWEET BOX</option>
-                                <option value="T SHIRT">T SHIRT</option>
-                                <option value="TABEL TOP">TABEL TOP</option>
-                                <option value="TANDOOR">TANDOOR</option>
-                                <option value="TEA COASTER">TEA COASTER</option>
-                                <option value="TEEN PACK">TEEN PACK</option>
-                                <option value="TEMPERATURE DEVICE">TEMPERATURE DEVICE</option>
-                                <option value="TONGUE SCRAPER">TONGUE SCRAPER</option>
-                                <option value="TOPS">TOPS</option>
-                                <option value="TOWELS">TOWELS</option>
-                                <option value="TRACK SUIT">TRACK SUIT</option>
+                                <option value="SCISSORS">SCISSORS</option>
+                                <option value="SHOW PIECE">SHOW PIECE</option>
+                                <option value="SOCKS">SOCKS</option>
+                                <option value="SPOON">SPOON</option>
+                                <option value="STAR">STAR</option>
+                                <option value="STEEL SHOW PC ITEMS">STEEL SHOW PC ITEMS</option>
+                                <option value="SWATCHES">SWATCHES</option>
+                                <option value="T SHIRTS">T SHIRTS</option>
+                                <option value="TEA CUP (27201751# MELAMINE)">TEA CUP (27201751# MELAMINE)</option>
+                                <option value="THAAL">THAAL</option>
+                                <option value="THREAD BOX SAMPLES">THREAD BOX SAMPLES</option>
+                                <option value="TOWEL">TOWEL</option>
+                                <option value="TOYS">TOYS</option>
+                                <option value="TRIM CARD">TRIM CARD</option>
                                 <option value="TROUSERS">TROUSERS</option>
-                                <option value="UNDER GARMENTS">UNDER GARMENTS</option>
-                                <option value="USED CLOTHING">USED CLOTHING</option>
-                                <option value="WAISCOAT">WAISCOAT</option>
-                                <option value="WALL HANNGING">WALL HANNGING</option>
-                                <option value="WALLETS">WALLETS</option>
-                                <option value="WATCH">WATCH</option>
-                                <option value="WAX">WAX</option>
-                                <option value="WEEDING ACCESSERIS">WEEDING ACCESSERIS</option>
-                                <option value="WELDING WIRE">WELDING WIRE</option>
-                                <option value="WINCH">WINCH</option>
-                                <option value="WOOD STICKS">WOOD STICKS</option>
-                                <option value="YARN">YARN</option>
+                                <option value="VISITING CARDS">VISITING CARDS</option>
+                                <option value="VISITING CARDS (BUNDLES)">VISITING CARDS (BUNDLES)</option>
+                                <option value="WAIST APPRONS">WAIST APPRONS</option>
+                                <option value="WAIST ROBE PKT">WAIST ROBE PKT</option>
+                                <option value="WRIST WATCH">WRIST WATCH</option>
+                                <option value="ZIPPER HOODIE">ZIPPER HOODIE</option>
+
                     </select>
                     <input type="number" name="Qty ${newItemIndex} (Box ${boxIndex})" placeholder="Enter Quantity">
                 `;
