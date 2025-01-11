@@ -690,10 +690,10 @@
 
                     <!-- Weight and Volume Fields -->
                     <label for="box-1-chargeable-weight">Actual Weight:</label> 
-                    <input type="number" id="box-1-chargeable-weight" name="Chargeable Weight 1" placeholder="Enter Chargeable Weight">
+                    <input type="number" id="box-1-chargeable-weight" name="Chargeable Weight 1" placeholder="Enter Actual Weight" step="any">
 
-                    <label for="box-1-chargeable-volume">Chargeable Volume:</label>
-                    <input type="number" id="box-1-chargeable-volume" name="Chargeable Volume 1" placeholder="Enter Chargeable Volume">
+                    <label for="box-1-chargeable-volume">Box Volume:</label>
+                    <input type="number" id="box-1-chargeable-volume" name="Chargeable Volume 1" placeholder="Enter Box Volume" step="any">
 
                     <label for="box-1-dispatching-weight" class="hidden-field">Dispatching Weight:</label>
                     <input type="number" id="box-1-dispatching-weight" name="Dispatching Weight 1" placeholder="Enter Dispatching Weight" class="hidden-field">
@@ -800,8 +800,8 @@ function validateBoxes() {
     boxes.forEach((box, index) => {
         const boxIndex = index + 1;
         const boxType = box.querySelector(`[name="Box Type ${boxIndex}"]`);
-        const chargeableWeight = box.querySelector(`[name="Chargeable Weight ${boxIndex}"]`);
-        const chargeableVolume = box.querySelector(`[name="Chargeable Volume ${boxIndex}"]`);
+        const chargeableWeight = box.querySelector(`[name="Actual Weight ${boxIndex}"]`);
+        const chargeableVolume = box.querySelector(`[name="Box Volume ${boxIndex}"]`);
         const items = box.querySelectorAll('.item-row');
 
         // Check if box type, weight, and volume are filled
@@ -1051,11 +1051,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <button type="button" class="add-item-button" onclick="addItem(this)">+ Add Item</button>
 
-                <label for="chargeable-weight">Chargeable Weight:</label>
-                <input type="number" name="Chargeable Weight ${currentBoxes + 1}" placeholder="Enter Chargeable Weight">
+                <label for="chargeable-weight">Actual Weight:</label>
+                <input type="number" name="Chargeable Weight ${currentBoxes + 1}" placeholder="Enter Chargeable Weight"step="any">
 
-                <label for="chargeable-volume">Chargeable Volume:</label>
-                <input type="number" name="Chargeable Volume ${currentBoxes + 1}" placeholder="Enter Chargeable Volume">
+                <label for="chargeable-volume">Box Volume:</label>
+                <input type="number" name="Chargeable Volume ${currentBoxes + 1}" placeholder="Enter Chargeable Volume"step="any">
 
                 <label for="dispatching-weight" class="hidden-field">Dispatching Weight:</label>
                 <input type="number" name="Dispatching Weight ${currentBoxes + 1}" placeholder="Enter Dispatching Weight" class="hidden-field">
