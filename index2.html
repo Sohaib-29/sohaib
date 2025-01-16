@@ -805,7 +805,7 @@ function validateBoxes() {
         const items = box.querySelectorAll('.item-row');
 
         // Check if box type, weight, and volume are filled
-        if (!boxType.value || !chargeableWeight.value || !chargeableVolume.value) {
+        if (!boxType.value || !chargeableWeight.value ) {
             isValid = false;
             showMessage(`Please fill all fields for Box #${boxIndex}.`, 'error');
             return;
