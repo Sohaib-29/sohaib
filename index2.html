@@ -520,6 +520,9 @@
                     <label for="box-1-type">Box Type:</label>
                     <select id="box-1-type" name="Box Type 1" class="searchable-dropdown">
                         <option value="">Select Box Type</option>
+                        <option value="Sample">Sample</option>
+                        <option value="Document">Document</option>
+                        <option value="Gift Box">Gift Box</option>
                         <option value="Flyer">Flyer</option>
                         <option value="Box 1">Box 1</option>
                         <option value="Box 2">Box 2</option>
@@ -722,8 +725,14 @@
 
         // Fetch and Display Username
         const username = localStorage.getItem('loggedInUser') || 'Guest';
-        document.getElementById('username-display').textContent = `Logged in as: ${username}`;
-        document.getElementById('username').value = username;
+    
+        if (username === 'Guest') {
+        window.location.href = 'index.html'; // Redirect to index.html if user is Guest
+        } else {
+            document.getElementById('username-display').textContent = `Logged in as: ${username}`;
+            document.getElementById('username').value = username;
+        }
+
 
 // Handle Form Submission
 document.getElementById('shipment-form').addEventListener('submit', async (event) => {
@@ -890,6 +899,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <label for="box-type">Box Type:</label>
                 <select name="Box Type ${currentBoxes + 1}" class="searchable-dropdown">
                     <option value="">Select Box Type</option>
+                        <option value="">Select Box Type</option>
+                        <option value="Sample">Sample</option>
+                        <option value="Document">Document</option>
+                        <option value="Gift Box">Gift Box</option>
                         <option value="Flyer">Flyer</option>
                         <option value="Box 1">Box 1</option>
                         <option value="Box 2">Box 2</option>
